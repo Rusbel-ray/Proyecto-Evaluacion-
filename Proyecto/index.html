@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andina Composta</title>
+
+    <link href="img/icon.png" rel="icon">
+    <link href="img/icon.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!--iconos (font awesome)-->
+    <script src="https://kit.fontawesome.com/a4a68031a2.js" crossorigin="anonymous"></script>
+    <!--google fonts (letras)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        li {
+            float: left;
+            list-style: none;
+            margin: 0 25px 25px 0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body leftmargin=50>
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navegacion-fm">
+                        <span class="sr-only">Despegar / Ocultar Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Andina Composta</a>
+                </div>
+                <!--Iniciar Menu-->
+                <div class="collapse navbar-collapse" id="navegacion-fm">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#tab1">Inicio</a></li>
+                        <!--Inicio-->
+                        <li><a href="#tab2">Nosotros</a></li>
+                        <li><a href="#tab3">Contacto</a></li>
+                        <li><a href="#tab4">Testimonios</a></li>
+                    </ul>
+                    <!--    Boton de busqueda   -->
+                    <form action="" class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="buscar">
+                        </div>
+                        <button type="submit" class="bmtn btn-primary">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="jumbotron">
+        <div class="container">
+        </div>
+    </section>
+
+    <!--Inicio de  contenido principal -->
+    <div class="tab_container">
+        <div class="tab_content" id="tab1" style="display: none;">
+            <div id="titprin">
+                <h1 class="logo">Andina<span> Composta</span></h1>
+            </div>
+            <div id="parrafoini">
+                <br>
+                <p>Nueva Pagina de Andina Composta Aplicando nuevas tecnologias como jquery</p>
+                <p>Somos un grupo de estudiantes de la andina que se dedica a recolectar materia inorgánica que
+                    probablemente usted no necesita.</p>
+            </div>
+            <div class="nuspro">
+                <h3>Nuestros productos y servicios</h3>
+            </div>
+
+            <div class="button-checkout"> <button class="btn" id="checkout" onclick="pay()"> Pagar
+            </div>
+            <br>
+
+            <div id="producto">
+
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/lasalvacion.jpeg" width="350" height="200">
+                            <div class="card-body">
+                                <h5 class="card-title">La salvacion</h5>
+                                <p class="card-text">S/150</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-primary" id="detalle1">Detalles</a>
+                                    </div>
+                                    <button class="btn btn-success" onclick="add('product->1', 150)">Agregar</button>
+                                </div>
+                                <span id="detsalva">
+                                    <p>Los mejores trabajadores Andina Composta van a tu casa con tus residuos
+                                        organicos realizan todos los procedimientos necesarios para hacer
+                                        composta,nosotros incluimos las lombrices, tierra negra y el contenedor.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/compost.jpeg" width="350" height="200">
+                            <div class="card-body">
+                                <h5 class="card-title">Compost del tio</h5>
+                                <p class="card-text">S/15</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-primary" id="detalle2">Detalles</a>
+                                    </div>
+                                    <button class="btn btn-success" onclick="add('product->1', 15)">Agregar</button>
+                                </div>
+                                <span id="detcomp">
+                                    <p> O puedes comprar directamente la composta del tio Jose, una composta seleccionada de la
+                                        mejor calidad con algunas lombrices, saco de 10kg con un sustrato altamente nutritivo para tus
+                                        plantas.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/guiacompost.jpeg" width="350" height="200">
+                            <div class="card-body">
+                                <h5 class="card-title">Guia de compostaje y microcompostaje</h5>
+                                <p class="card-text">S/20</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-primary" id="detalle3">Detalles</a>
+                                    </div>
+                                    <button class="btn btn-success" onclick="add('product->1', 20)">Agregar</button>
+                                </div>
+                                <span id="detguia">
+                                    <p>Un libro con bastante informacion recopilada de los mejores expertos de composta.
+                                        Detalla muchos secretos de como realizar los distintos tipos de composta y los distintos
+                                        materiales con los que puedes hacer compostaje.</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab_content" id="tab3" style="display: none;">
+            <div class="body-contact">
+                <div class="content">
+                    <h1 class="logo">Contác<span>tanos</span></h1>
+                    <div class="contact-wrapper">
+                        <div class="contact-form">
+                            <h3>Contactanos</h3>
+                            <form action="">
+                                <p>
+                                    <label> Nombre</label>
+                                    <input type="text" name="nombre" id="">
+                                </p>
+                                <p>
+                                    <label for=""> Correo</label>
+                                    <input type="email" name="correo" id="">
+                                </p>
+                                <p>
+                                    <label for="">Telefono</label>
+                                    <input type="tel" name="Telefono" id="">
+                                </p>
+                                <p>
+                                    <label for=""> Asunto</label>
+                                    <input type="text" name="Asunto" id="">
+                                </p>
+                                <p class="block">
+                                    <label for=""> Mensage</label>
+                                    <textarea name="Mensage" id="" rows="3"></textarea>
+                                </p>
+                                <p class="block">
+                                    <button type="submit">
+                                        Enviar
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Mas Información</h4>
+                            <i class="fa-solid fa-phone"> +51 954 781 345</i> <br>
+                            <i class="fa-solid fa-envelope"> andina.composta@gmail.com</i> <br>
+                            <br>
+                            <p>Informacion (no se que poner)</p>
+                        </div>
+                    </div> <br>
+                    <h3>Nos ubicamos:</h3> <br>
+                    <div id="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.9745597635424!2d-71.90610258517191!3d-13.537152090486657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7edf8692efd5%3A0xb2151ede7622f88b!2sUniversidad%20Andina%20del%20Cusco!5e0!3m2!1ses-419!2spe!4v1662754105011!5m2!1ses-419!2spe"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab_content" id="tab2" style="display: block;">
+            <div class="nosotrosparr">
+                <h1 class="logo">Un poco d<span>e nosotros</span></h1>
+                <p>
+                    Este proyecto empezó el año 2022 conjunto a la UAC, cuando estábamos en el 6to semestre de la
+                    carrera de
+                    ingeniera de sistemas, Sabíamos desde antes que no había mucha gente consciente acerca de las varias
+                    maneras de reciclar con la materia orgánica. El nombre Andina Composta viene en parte del nombre de
+                    la
+                    Universidad y de la composta.
+                    Queremos ser LA organización que se encargue de recolectar la basura orgánica que producen las casas
+                    cusqueñas, nuestro varios integrantes recolectan la basura, la clasificamos la descomponemos en
+                    nuestros
+                    contenedores para que obtengamos abono. Despues de este proceso que dura cerca de 5-6 meses
+                    <br><br><br><br>
+                </p>
+            </div>
+            <div>
+                <ul class="fotos">
+                    <li><a href="https://www.facebook.com/jose.apazaduran" title="Jose Apaza" target="_blank"><img
+                                src="img/jose.jpeg" alt="" border="0"></a></li>
+                    <li><a href="https://www.facebook.com/ruzbel.abarca" title="Rusbel Abarca" target="_blank"><img
+                                src="img/rusbel.jpeg" alt="" border="0"></a></li>
+                    <li><a href="https://www.facebook.com/ilmari.aijo.3" title="Ilmari Latva Aijo" target="_blank"><img
+                                src="img/ilmari.jpeg" alt="" border="0"></a></li>
+                    <li><a href="https://www.facebook.com/ferchosos16" title="Fernando Zavaleta" target="_blank"><img
+                                src="img/fercho.jpeg" alt="" border="0"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab_content" id="tab4" style="display: none;">
+        <div id="testimo">
+            <h2 class="logo">Algunos de nues<span>tros Testimonios</span></h2>
+        </div>
+        <br>
+        <i>
+            <p>
+                "Soy <b>Raul Adriano Huamani</b> desde hace 2 semanas empecé a colaborar con Andina Composta la
+                verdad es que
+                estoy ansiado de los resultados de la composta porque sé que los representantes trabajan duro para
+                seguir con esta organizacion que trabaja para mejorar los residuos de la ciudad de cusco"
+                <br>
+                <br>
+                "Mi nombre es <b>Jeremias Rivas</b>, la verdad cuando me enteré del proyecto quise ayudar, estaba
+                ansioso
+                porque no sabia que hacer con mis basura inorganica ahora estoy esperando mi primer balde de abono
+                luego
+                de 4 meses, estoy feliz!"
+                <br>
+                <br>
+                "Soy <b>Cesar Turner</b> y solo quiero agradecer a Andina Composta que ha sido de gran ayuda para
+                entender y
+                poder compartir todo sobre el compost .Espero que sigan ayudando a mejorar el planeta , muchas
+                gracias."
+                <br>
+                <br>
+                "Me conocen como <b>Jean Carlos Huanca</b>, y he recibido la ayuda de Andina Composta, fue muy
+                entretenido y
+                responsable la forma en que realizan esta actividad para ayudar a nuestro cusco."
+            </p>
+        </i>
+    </div>
+    </div>
+
+
+
+    <section class="main container"></section>
+    <footer>
+        <div class="footer">
+            <section class="jumbotron2">
+                Todos los derechos reservados <br> AndinaComposta.com™ 2022
+                <div>AndinaComposta.com es pate de de la Universidad Andina del Cusco, publicidad disponible para
+                    afiliados.</div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+
+
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            //When page loads...
+            $(".tab_content").hide(); //Hide all content
+            $("ul.nav li:first").addClass("active").show(); //Activate first tab
+            $(".tab_content:first").show(); //Show first tab content
+
+            //On Click Event
+            $("ul.nav li").click(function () {
+
+                $("ul.nav li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //Add "active" class to selected tab
+                $(".tab_content").hide(); //Hide all tab content
+
+                var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to
+                //identify the active tab + content
+                $(activeTab).fadeIn(); //Fade in the active ID content
+                return false;
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(() => {
+            $('#detsalva').hide();
+            $('#detcomp').hide();
+            $('#detguia').hide();
+
+            $('#detalle1').click(function () {
+                $('#detsalva').toggle('slow')
+            });
+            $('#detalle2').click(function () {
+                $('#detcomp').toggle('slow')
+            });
+            $('#detalle3').click(function () {
+                $('#detguia').toggle('slow')
+            });
+        });
+    </script>
+    <div id="naptha_container0932014_0707" style="position: absolute; top: 0px; left: 0px;"></div>
+</body>
+
+</html>
